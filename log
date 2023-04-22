@@ -197,3 +197,8 @@ treemap.c:132:3: error: ‘nuevo’ undeclared (first use in this function)
 treemap.c:132:3: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 f3fd503
+Sat 22 Apr 2023 01:37:54 AM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+a30f3da
