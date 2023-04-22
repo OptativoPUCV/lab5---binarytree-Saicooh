@@ -447,3 +447,19 @@ Sat 22 Apr 2023 02:56:09 AM UTC:
  tests:  25|1
 total_score: 60/70
 759b4a6
+Sat 22 Apr 2023 03:15:20 AM UTC: 
+ treemap.c | 19 ++++++++++++++++++-
+ 1 file changed, 18 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘upperBound’:
+treemap.c:203:7: error: ‘nodeMayor’ undeclared (first use in this function); did you mean ‘nodoMayor’?
+  203 |       nodeMayor = tree -> current;
+      |       ^~~~~~~~~
+      |       nodoMayor
+treemap.c:203:7: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:192:13: error: unused variable ‘nodoMayor’ [-Werror=unused-variable]
+  192 |   TreeNode *nodoMayor = NULL;
+      |             ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+f1326e7

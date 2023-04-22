@@ -175,7 +175,7 @@ Pair *nextTreeMap(TreeMap *tree)
 
   TreeNode *padre = tree -> current -> parent;
   
-  while (padre != NULL && tree -> current == padre -> right) 
+  while (padre && tree -> current == padre -> right) 
   {
     tree -> current = padre;
     padre = padre -> parent;
@@ -187,7 +187,24 @@ Pair *nextTreeMap(TreeMap *tree)
   return padre -> pair;
 }
 
-Pair * upperBound(TreeMap *tree, void *key) 
+Pair *upperBound(TreeMap *tree, void *key) 
 {
-    return NULL;
+  TreeNode *nodoMayor = NULL;
+  tree -> current = tree -> root;
+
+  while(tree -> current)
+  {
+    if(is_equal(tree, tree -> current -> pair -> key, key)) return tree -> current -> pair;
+      
+    else if(tree -> lower_than(tree -> current -> pair -> key, key)) tree -> current = tree -> current -> right;
+      
+    else
+    {
+      nodeMayor = tree -> current;
+      tree -> current = tree -> current -> left;
+    }  
+  }
+  
+  if(nodeMayor) return nodeMayor -> pair;
+  return NULL;
 }
