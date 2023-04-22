@@ -100,7 +100,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value)
 
   tree -> current = nuevo;  
 }
-*/
+
 
 /*void insertTreeMap(TreeMap * tree, void* key, void * value) {
 //Hacer
