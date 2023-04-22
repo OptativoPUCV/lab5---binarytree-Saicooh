@@ -67,7 +67,7 @@ Pair *searchTreeMap(TreeMap *tree, void *key)
 }
 
 
-/*void insertTreeMap(TreeMap * tree, void* key, void * value)
+void insertTreeMap(TreeMap * tree, void* key, void * value)
 {
   TreeNode *nuevo = createTreeNode(key, value);
 
@@ -86,13 +86,13 @@ Pair *searchTreeMap(TreeMap *tree, void *key)
   {
     if(is_equal(tree, key, current -> pair -> key)) 
     return;
+
+    parent = current;
+
+    if(tree -> lower_than(key, current -> pair -> key) == 0) current = current -> right;
+    else current = current -> left;
   }
-
-  parent = current;
-
-  if(tree -> lower_than(key, current -> pair -> key) == 0) current = current -> right;
-  else current = current -> left;
-
+  
   nuevo -> parent = parent;
   
   if(tree -> lower_than(key, parent -> pair -> key) == 0) parent -> right = nuevo;
@@ -102,11 +102,11 @@ Pair *searchTreeMap(TreeMap *tree, void *key)
 }
 */
 
-void insertTreeMap(TreeMap * tree, void* key, void * value) 
-{
-  TreeNode *nuevoNode = createTreeNode(key, value);
+/*void insertTreeMap(TreeMap * tree, void* key, void * value) {
+//Hacer
+  TreeNode* nuevoNode = createTreeNode(key, value);
 
-  if (tree -> root != NULL)
+  if (tree -> root == NULL) 
   {
     tree -> root = nuevoNode;
     tree -> current = nuevoNode;
@@ -114,14 +114,13 @@ void insertTreeMap(TreeMap * tree, void* key, void * value)
     return;
   }
 
-  TreeNode* current = tree->root;
-  TreeNode* parent = NULL;
+  TreeNode *current = tree -> root;
+  TreeNode *parent = NULL;
 
-  while(current != NULL){
-    if(is_equal(tree, key, current->pair->key) == 1) {
-        return;
-      }
-
+  while(current != NULL)
+  {
+    if(is_equal(tree, key, current->pair->key) == 1) return;
+    
     parent = current;
 
     if(tree->lower_than(key,current->pair->key) == 0) {
@@ -129,15 +128,16 @@ void insertTreeMap(TreeMap * tree, void* key, void * value)
       } else current = current->left;
   }
 
-  nuevoNode -> parent = parent;
+  nuevoNode->parent = parent;
     if (tree->lower_than(key, parent->pair->key) == 0) {
       parent->right = nuevoNode;
     } else {
       parent->left = nuevoNode;
     }
     
-  tree->current = nuevoNode;
+  tree -> current = nuevoNode;
 }
+*/
 
 TreeNode * minimum(TreeNode * x){
 
