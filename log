@@ -463,3 +463,9 @@ treemap.c:192:13: error: unused variable ‘nodoMayor’ [-Werror=unused-variabl
 cc1: all warnings being treated as errors
 Compilation failed
 f1326e7
+Sat 22 Apr 2023 03:15:35 AM UTC: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  29|0
+total_score: 70/70
+227db10

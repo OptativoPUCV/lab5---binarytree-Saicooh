@@ -200,11 +200,11 @@ Pair *upperBound(TreeMap *tree, void *key)
       
     else
     {
-      nodeMayor = tree -> current;
+      nodoMayor = tree -> current;
       tree -> current = tree -> current -> left;
     }  
   }
   
-  if(nodeMayor) return nodeMayor -> pair;
+  if(nodoMayor) return nodoMayor -> pair;
   return NULL;
 }
