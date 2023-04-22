@@ -104,7 +104,7 @@ Pair *searchTreeMap(TreeMap *tree, void *key)
 
 void insertTreeMap(TreeMap * tree, void* key, void * value) 
 {
-  TreeNode *nuevo = createTreeNode(key, value);
+  TreeNode *nuevoNode = createTreeNode(key, value);
 
   if (tree -> root != NULL)
   {
@@ -136,7 +136,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value)
       parent->left = nuevoNode;
     }
     
-  tree->current = nuevo;
+  tree->current = nuevoNode;
 }
 
 TreeNode * minimum(TreeNode * x){
