@@ -52,7 +52,7 @@ Pair * searchTreeMap(TreeMap *tree, void *key)
 {
   tree -> current = tree -> root;
 
-  while(tree -> current)
+  while(1)
   {
     if(is_equal(tree, tree -> current -> pair -> key, key))
       return tree -> current -> pair;
@@ -62,6 +62,7 @@ Pair * searchTreeMap(TreeMap *tree, void *key)
 
     else tree -> current = tree -> current -> left;
   }
+  
   return NULL;
 }
 
