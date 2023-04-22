@@ -385,3 +385,19 @@ Sat 22 Apr 2023 01:56:52 AM UTC:
  tests:  15|4
 total_score: 25/70
 a35ec18
+Sat 22 Apr 2023 02:27:10 AM UTC: 
+ treemap.c | 36 ++++++++++++++++++++++++++++++++++--
+ 1 file changed, 34 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘removeNode’:
+treemap.c:139:27: error: ‘minimo’ undeclared (first use in this function); did you mean ‘minimum’?
+  139 |     node -> pair -> key = minimo -> pair -> key;
+      |                           ^~~~~~
+      |                           minimum
+treemap.c:139:27: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:138:15: error: unused variable ‘min’ [-Werror=unused-variable]
+  138 |     TreeNode *min = minimum(node -> right);
+      |               ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+f51cf50
