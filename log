@@ -336,3 +336,18 @@ treemap.c:76:20: error: ‘nuevo’ undeclared (first use in this function)
 treemap.c:76:20: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 df7063a
+Sat 22 Apr 2023 01:52:16 AM UTC: 
+ treemap.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:76:20: error: ‘nuevo’ undeclared (first use in this function)
+   76 |     tree -> root = nuevo;
+      |                    ^~~~~
+treemap.c:76:20: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:72:13: error: unused variable ‘nuevoNode’ [-Werror=unused-variable]
+   72 |   TreeNode *nuevoNode = createTreeNode(key, value);
+      |             ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+e009047
