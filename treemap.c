@@ -108,8 +108,8 @@ void insertTreeMap(TreeMap * tree, void* key, void * value)
 
   if (tree -> root != NULL)
   {
-    tree -> root = nuevo;
-    tree -> current = nuevo;
+    tree -> root = nuevoNode;
+    tree -> current = nuevoNode;
     
     return;
   }
