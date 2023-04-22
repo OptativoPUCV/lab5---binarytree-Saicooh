@@ -70,14 +70,14 @@ Pair *searchTreeMap(TreeMap *tree, void *key)
 void insertTreeMap(TreeMap * tree, void* key, void * value)
 {
   TreeNode *nuevoNode = createTreeNode(key, value);
-
-   if (tree -> root == NULL) 
-   {
-     tree -> root = nuevoNode;
-     tree -> current = nuevoNode;
+  
+  if (tree -> root == NULL) 
+  {
+    tree -> root = nuevo;
+    tree -> current = nuevo;
      
-     return;
-   }
+    return;
+  }
 
   TreeNode *current = tree -> root;
   TreeNode *parent = NULL;
