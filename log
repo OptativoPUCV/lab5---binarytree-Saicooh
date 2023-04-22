@@ -2,3 +2,21 @@ Sat 22 Apr 2023 12:40:38 AM UTC:
  tests:  1|8
 total_score: 0/70
 88a44c9
+Sat 22 Apr 2023 12:50:51 AM UTC: 
+ treemap.c | 17 +++++++++++------
+ 1 file changed, 11 insertions(+), 6 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘createTreeNode’:
+treemap.c:32:9: error: unused variable ‘pair’ [-Werror=unused-variable]
+   32 |   Pair *pair = (Pair*) malloc(sizeof(Pair));
+      |         ^~~~
+treemap.c: In function ‘createTreeMap’:
+treemap.c:44:16: error: statement with no effect [-Werror=unused-value]
+   44 |   mapa -> root == NULL;
+      |                ^
+treemap.c:45:19: error: statement with no effect [-Werror=unused-value]
+   45 |   mapa -> current == NULL;
+      |                   ^
+cc1: all warnings being treated as errors
+Compilation failed
+41ed6b2
