@@ -92,7 +92,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value)
 
   new -> parent = parent;
   
-  if(!tree -> lower_than(key, parent -> pair -> key)) parent -> right = new;
+  if(tree -> lower_than(key, parent -> pair -> key) == 0) parent -> right = new;
   else parent -> left = new;
 
   tree -> current = new;  
