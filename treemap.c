@@ -86,16 +86,16 @@ void insertTreeMap(TreeMap * tree, void* key, void * value)
 
     parent = current;
 
-    if(tree->lower_than(key,current->pair->key) == 0) current = current->right;
+    if(!tree->lower_than(key,current->pair->key)) current = current->right;
     else current = current->left;
   }
   
   nuevoNode -> parent = parent;
   
-  if (!tree -> lower_than(key, parent->pair->key)) parent -> right = nuevoNode;
-  else parent->left = nuevoNode;
+  if (!tree -> lower_than(key, parent -> pair -> key)) parent -> right = nuevoNode;
+  else parent -> left = nuevoNode;
     
-  tree->current = nuevoNode;
+  tree -> current = nuevoNode;
 }
 
 
