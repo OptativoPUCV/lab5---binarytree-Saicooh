@@ -175,7 +175,7 @@ Pair *nextTreeMap(TreeMap *tree)
 
   TreeNode *padre = tree -> current -> parent;
   
-  while (padre && tree -> current == padre -> right) 
+  while (padre != NULL && tree -> current == padre -> right) 
   {
     tree -> current = padre;
     padre = padre -> parent;
@@ -187,6 +187,7 @@ Pair *nextTreeMap(TreeMap *tree)
   return padre -> pair;
 }
 
-Pair * upperBound(TreeMap * tree, void* key) {
+Pair * upperBound(TreeMap *tree, void *key) 
+{
     return NULL;
 }
