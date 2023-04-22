@@ -104,11 +104,13 @@ Pair *searchTreeMap(TreeMap *tree, void *key)
 
 void insertTreeMap(TreeMap * tree, void* key, void * value) {
 //Hacer
-  TreeNode* nuevoNode = createTreeNode(key, value);
+  TreeNode *nuevo = createTreeNode(key, value);
 
-  if (tree->root == NULL) {
-    tree->root = nuevoNode;
-    tree->current = nuevoNode;
+  if (tree -> root != NULL)
+  {
+    tree -> root = nuevo;
+    tree -> current = nuevo;
+    
     return;
   }
 
