@@ -71,7 +71,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value)
 {
   TreeNode *new = createTreeNode(key, value);
 
-  if (tree -> root != NULL)
+  if (tree -> root)
   {
     tree -> root = new;
     tree -> current = new;
@@ -82,7 +82,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value)
   TreeNode *current = tree -> root;
   TreeNode *parent = NULL;
 
-  while(current != NULL)
+  while(current)
     if(is_equal(tree, key, current -> pair -> key)) return;
 
   parent = current;
@@ -116,12 +116,6 @@ void eraseTreeMap(TreeMap * tree, void* key){
     removeNode(tree, node);
 
 }
-
-
-
-
-
-
 
 Pair * upperBound(TreeMap * tree, void* key) {
     return NULL;
