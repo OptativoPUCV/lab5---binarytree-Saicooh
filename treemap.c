@@ -102,8 +102,8 @@ Pair *searchTreeMap(TreeMap *tree, void *key)
 }
 */
 
-void insertTreeMap(TreeMap * tree, void* key, void * value) {
-//Hacer
+void insertTreeMap(TreeMap * tree, void* key, void * value) 
+{
   TreeNode *nuevo = createTreeNode(key, value);
 
   if (tree -> root != NULL)
@@ -129,14 +129,14 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
       } else current = current->left;
   }
 
-  nuevoNode->parent = parent;
+  nuevo -> parent = parent;
     if (tree->lower_than(key, parent->pair->key) == 0) {
-      parent->right = nuevoNode;
+      parent->right = nuevo;
     } else {
-      parent->left = nuevoNode;
+      parent->left = nuevo;
     }
     
-  tree->current = nuevoNode;
+  tree->current = nuevo;
 }
 
 TreeNode * minimum(TreeNode * x){
