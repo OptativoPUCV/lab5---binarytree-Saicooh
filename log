@@ -164,3 +164,14 @@ Sat 22 Apr 2023 01:37:02 AM UTC:
  1 file changed, 6 insertions(+), 6 deletions(-)
  tests:  0|0
 7eff9d6
+Sat 22 Apr 2023 01:37:14 AM UTC: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:134:23: error: ‘nuevoNode’ undeclared (first use in this function)
+  134 |       parent->right = nuevoNode;
+      |                       ^~~~~~~~~
+treemap.c:134:23: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+cf821a6
